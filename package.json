@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
+    "prepare": "husky install",
     "dev": "vite",
     "build": "run-p type-check build-only",
     "preview": "vite preview",
@@ -12,10 +13,13 @@
     "format": "prettier --write src/",
     "lint:style": "stylelint **/*.{vue,css}",
     "spellcheck": "cspell lint --dot --gitignore --color --cache --show-suggestions \"src/**/*.@(html|js|cjs|mjs|ts|tsx|css|scss|md|vue)\"",
-    "lint:stage": "lint-staged"
+    "lint:staged": "lint-staged",
+    "lint": "run-p lint:staged type-check spellcheck",
+    "commit": "git-cz",
+    "commitlint": "commitlint --edit"
   },
   "lint-staged": {
-    "*": "prettier --write",
+    "*.{html,vue,css,sass,scss,vue,ts}": "prettier --write",
     "*.{vue,ts}": "eslint --fix",
     "*.{html,vue,css,sass,scss}": "stylelint --fix"
   },
@@ -56,6 +60,9 @@
     "@commitlint/cz-commitlint": "17.6.7",
     "commitizen": "4.3.0",
     "husky": "8.0.3",
-    "lint-staged": "13.2.3"
+    "lint-staged": "13.2.3",
+    "cz-git": "1.7.0",
+    "zx": "7.2.3",
+    "tsno": "2.0.0"
   }
 }

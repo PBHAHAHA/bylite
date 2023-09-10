@@ -1,7 +1,9 @@
 bylite
 commitlint
+huscky
 nightwatch
 pinia
 rushstack
 stylelint
+tsno
 vuejs
