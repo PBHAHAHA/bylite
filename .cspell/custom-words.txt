@@ -1,9 +1,14 @@
+behaviour
+Byelide
 bylite
 commitlint
 huscky
 nightwatch
+optimizelegibility
 pinia
+Puub
 rushstack
 stylelint
 tsno
+vuedraggable
 vuejs

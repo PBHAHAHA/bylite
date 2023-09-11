@@ -8,9 +8,13 @@
     "playwright.config.*"
   ],
   "compilerOptions": {
+    "baseUrl": ".",
     "composite": true,
     "module": "ESNext",
     "moduleResolution": "Node",
-    "types": ["node"]
+    "types": ["node"],
+    "paths": {
+      "@/*": ["src/*"]
+    }
   }
 }
